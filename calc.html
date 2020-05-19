@@ -1,0 +1,103 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: hsl(0, 1%, 86%);
+    margin: 0;
+  }
+  .calculator {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 340px;
+    box-shadow: -6px -6px 9px #fff, 6px 6px 11px #aaa;
+    border-radius: 20px;
+  }
+  input {
+    padding: 12px 12px;
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background: none;
+    box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px #aaa;
+    border: none;
+    text-align: right;
+    text-shadow: -1px -1px 2px #fff, 2px 2px 2px rgba(#000, 0.4);
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .keys {
+    margin-top: 20px;
+    outline: none;
+    padding: 15px;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  button {
+    background: none;
+    box-shadow: -4px -4px 9px #fff, 6px 6px 6px #aaa;
+    outline: none;
+    padding: 15px;
+    color: red;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #bada55;
+  }
+  button:active {
+    box-shadow: inset -6px -4px 6px #fff, inset 6px 6px 9px #aaa;
+  }
+
+  .is_clear {
+    border-radius: 6px;
+    box-shadow: -6px -6px 6px #fff, 6px 6px 6px #aaa;
+    grid-column: span 3;
+  }
+  .is_equals {
+    border-radius: 6px;
+    grid-column: span 2;
+  }
+  .eq__key,
+  .op__key {
+    color:#000;
+  }
+</style>
+
+<div class="calculator">
+  <input type="number" placeholder="0" value="0" />
+
+  <div class="keys">
+    <button class="op__key is_clear">c</button>
+    <button class="op__key" op="divide">&divide;</button>
+
+    <button class="num__key">7</button>
+    <button class="num__key">8</button>
+    <button class="num__key">9</button>
+    <button class="op__key" op="multiply">&times;</button>
+
+    <button class="num__key">4</button>
+    <button class="num__key">5</button>
+    <button class="num__key">6</button>
+    <button class="op__key" op="subtract">&minus;</button>
+
+    <button class="num__key">1</button>
+    <button class="num__key">2</button>
+    <button class="num__key">3</button>
+    <button class="op__key" op="add">&plus;</button>
+
+    <button class="num__key is_zero">0</button>
+    <button class="num__key">.</button>
+    <button class="eq__key is_equals">&equals;</button>
+  </div>
+</div>
+<script src="js/main.js"></script>
