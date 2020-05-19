@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calulator_test</title>
+    <style>
+      body {
+        margin: 0 auto;
+      }
+      .calculator_box {
+        margin: 50px auto;
+        max-width: 400px;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      input {
+        margin: 0 auto;
+        outline: none;
+        padding: 12px;
+        width: 90%;
+        text-align: right;
+        font-size: 24px;
+        border: none;
+        background: none;
+        box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px #aaa;
+
+        border-radius: 20px;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .keys {
+        display: grid;
+        grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+        grid-gap: 15px;
+        margin-top: 25px;
+        outline: none;
+      }
+      .eq_key {
+        color: #fff;
+        background: hsl(300, 100%, 15%);
+        grid-column: span 2;
+      }  
+      button {
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 1.25em;
+        border-radius: 20px;
+        color: #bada55;
+        border: none;
+        box-shadow: -4px -4px 9px #fff, 6px 6px 6px #aaa;
+        outline: none;
+      }
+      button:hover {
+        background: #aaa;
+      }
+      button:nth-child(1) {
+        color: #fff;
+        background: hsl(300, 100%, 25%);
+      }
+      button:nth-child(2) {
+        color: #fff;
+        background: hsl(300, 100%, 35%);
+      }
+      button:nth-child(3) {
+        color: #fff;
+        background: hsl(300, 100%, 45%);
+      }
+      button:nth-child(4) {
+        color: #fff;
+        background: hsl(300, 100%, 55%);
+      }
+      button:nth-child(8) {
+        color: #fff;
+        background: hsl(300, 100%, 45%);
+      }
+      button:nth-child(12) {
+        color: #fff;
+        background: hsl(300, 100%, 35%);
+      }
+      button:nth-child(16) {
+        color: #fff;
+        background: hsl(300, 100%, 25%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator_box">
+      <input type="number" id="calc-display-val" value="0" />
+
+      <div class="keys">
+        <button class="clear_key">AC</button>
+        <button class="op_key id="backspace">&#8676;</button>
+        <button class="num_key">%</button>
+        <button class="op_key">&divide;</button>
+        
+        <button class="num_key">7</button>
+        <button class="num_key">8</button>
+        <button class="num_key">9</button>
+        <button class="op_key">&times;</button>
+
+        <button class="num_key">6</button>
+        <button class="num_key">5</button>
+        <button class="num_key">4</button>
+        <button class="op_key">&minus;</button>
+
+        <button class="num_key">3</button>
+        <button class="num_key">2</button>
+        <button class="num_key">1</button>
+        <button class="op_key">&plus;</button>
+
+        <button class="num_key">0</button>
+        <button class="num_key id="decimal">.</button>
+        <button class="op_key eq_key">&equals;</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
